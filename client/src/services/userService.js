@@ -1,13 +1,5 @@
 // services/userService.js
-import axios from 'axios';
-
-const api = axios.create({
-  baseURL: 'http://localhost:4000',
-  withCredentials: true,
-  headers: {
-    'Content-Type': 'application/json',
-  },
-});
+import api from "./api";
 
 export default {
   getUserData: (data) => api.post('/users/my-profile', data),
